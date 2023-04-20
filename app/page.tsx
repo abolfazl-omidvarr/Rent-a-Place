@@ -1,10 +1,5 @@
-import { Navbar, Container } from "./components";
+import { Navbar, Container, Modal } from "./components";
 
 export default function Home() {
-	return (
-		<main>
-			<Navbar />
-			<Container />
-		</main>
-	);
+	return <main></main>;
 }
