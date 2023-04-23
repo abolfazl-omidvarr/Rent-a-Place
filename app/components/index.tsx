@@ -6,6 +6,9 @@ import MenuItem from "./navbar/menuItem";
 
 import Modal from "./modals/modal";
 import RegisterModal from "./modals/registerModal";
+import LoginModal from "./modals/loginModal";
+
+import Input from "./inputs/input";
 
 import Container from "./container";
 import Avatar from "./avatar";
@@ -23,5 +26,7 @@ export {
 	Modal,
 	Button,
 	RegisterModal,
+	LoginModal,
 	Heading,
+	Input,
 };
