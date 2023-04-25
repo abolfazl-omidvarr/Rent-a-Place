@@ -3,6 +3,7 @@ import Search from "./navbar/search";
 import UserMenu from "./navbar/userMenu";
 import Logo from "./navbar/logo";
 import MenuItem from "./navbar/menuItem";
+import Categories from "./navbar/categories";
 
 import Modal from "./modals/modal";
 import RegisterModal from "./modals/registerModal";
@@ -14,6 +15,7 @@ import Container from "./container";
 import Avatar from "./avatar";
 import Button from "./button";
 import Heading from "./heading";
+import CategoryBox from "./categoryBox";
 
 export {
 	Navbar,
@@ -29,4 +31,6 @@ export {
 	LoginModal,
 	Heading,
 	Input,
+	Categories,
+	CategoryBox,
 };

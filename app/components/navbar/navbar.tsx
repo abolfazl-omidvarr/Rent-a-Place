@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Container, Logo, Search, UserMenu } from "../";
+import { Container, Logo, Search, UserMenu,Categories } from "../";
 import { safeUser } from "@/app/types";
 
 interface navbarProps {
@@ -19,6 +19,7 @@ const Navbar: React.FC<navbarProps> = ({ currentUser }) => {
 					<UserMenu currentUser={currentUser} />
 				</Container>
 			</div>
+			<Categories />
 		</div>
 	);
 };
