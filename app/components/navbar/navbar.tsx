@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Container, Logo, Search, UserMenu,Categories } from "../";
+import { Container, Logo, Search, UserMenu, Categories } from "../";
 import { safeUser } from "@/app/types";
 
 interface navbarProps {

@@ -8,8 +8,10 @@ import Categories from "./navbar/categories";
 import Modal from "./modals/modal";
 import RegisterModal from "./modals/registerModal";
 import LoginModal from "./modals/loginModal";
+import RentModal from "./modals/rentModal";
 
 import Input from "./inputs/input";
+import CategoryInput from "./inputs/categoryInput";
 
 import Container from "./container";
 import Avatar from "./avatar";
@@ -29,8 +31,10 @@ export {
 	Button,
 	RegisterModal,
 	LoginModal,
+	RentModal,
 	Heading,
 	Input,
+	CategoryInput,
 	Categories,
 	CategoryBox,
 };
