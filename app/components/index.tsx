@@ -12,29 +12,38 @@ import RentModal from "./modals/rentModal";
 
 import Input from "./inputs/input";
 import CategoryInput from "./inputs/categoryInput";
+import CountrySelect from "./inputs/countrySelect";
+import Counter from "./inputs/counter";
 
 import Container from "./container";
 import Avatar from "./avatar";
 import Button from "./button";
 import Heading from "./heading";
 import CategoryBox from "./categoryBox";
+import Map from "./map";
 
 export {
 	Navbar,
-	Container,
 	Logo,
 	Search,
 	UserMenu,
 	Avatar,
 	MenuItem,
+	///
 	Modal,
-	Button,
 	RegisterModal,
 	LoginModal,
 	RentModal,
-	Heading,
+	///
 	Input,
 	CategoryInput,
+	CountrySelect,
+	Counter,
+	///
+	Container,
+	Heading,
 	Categories,
 	CategoryBox,
+	Map,
+	Button,
 };
