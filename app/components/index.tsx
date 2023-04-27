@@ -14,6 +14,7 @@ import Input from "./inputs/input";
 import CategoryInput from "./inputs/categoryInput";
 import CountrySelect from "./inputs/countrySelect";
 import Counter from "./inputs/counter";
+import ImageUpload from "./inputs/imageUpload";
 
 import Container from "./container";
 import Avatar from "./avatar";
@@ -39,6 +40,7 @@ export {
 	CategoryInput,
 	CountrySelect,
 	Counter,
+	ImageUpload,
 	///
 	Container,
 	Heading,
