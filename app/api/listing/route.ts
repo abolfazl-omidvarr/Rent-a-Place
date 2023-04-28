@@ -32,7 +32,7 @@ export async function POST(request: Request) {
 			price,
 			title,
 			description,
-			userId: currentUser.id,
+			userId: currentUser?.id || "null",
 		},
 	});
 

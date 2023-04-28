@@ -6,14 +6,16 @@ import { useSearchParams, usePathname } from "next/navigation";
 import { Container, CategoryBox } from "../";
 import { categories } from "@/app/constants";
 
-const Categories = () => {
+interface CategoriesProps {}
+
+const Categories: React.FC<CategoriesProps> = () => {
 	const params = useSearchParams();
 	const category = params?.get("category");
 	const pathName = usePathname();
 
 	//check if we are in the main page, if not prevent render of category bar
 	const isMainPage = pathName === "/";
-	if (!isMainPage) return;
+	if (!isMainPage) return null;
 
 	return (
 		<Container>

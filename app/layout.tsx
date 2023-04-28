@@ -6,6 +6,7 @@ import {
 	RegisterModal,
 	LoginModal,
 	RentModal,
+	ClientOnly,
 } from "./components";
 import ToasterProvider from "./providers/toasterProvider";
 import getCurrentUser from "./actions/getCurrentUser";
@@ -28,14 +29,14 @@ export default async function RootLayout({
 	return (
 		<html lang="en">
 			<body className={font.className}>
-				<>
+				<ClientOnly>
 					{/* <Modal actionLabel="submit" title="hello world" isOpen /> */}
 					<ToasterProvider />
 					<RegisterModal />
 					<LoginModal />
 					<RentModal />
 					<Navbar currentUser={currentUser} />
-				</>
+				</ClientOnly>
 				{children}
 			</body>
 		</html>

@@ -22,6 +22,7 @@ import Button from "./button";
 import Heading from "./heading";
 import CategoryBox from "./categoryBox";
 import Map from "./map";
+import ClientOnly from "./clientOnly";
 
 export {
 	Navbar,
@@ -48,4 +49,5 @@ export {
 	CategoryBox,
 	Map,
 	Button,
+	ClientOnly,
 };
