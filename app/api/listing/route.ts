@@ -21,6 +21,8 @@ export async function POST(request: Request) {
 		description,
 	} = body;
 
+	const formattedPrice = parseInt(price);
+
 	const listing = await prisma.listing.create({
 		data: {
 			category,
@@ -29,7 +31,7 @@ export async function POST(request: Request) {
 			roomCount,
 			bathroomCount,
 			imageSrc,
-			price,
+			price: formattedPrice,
 			title,
 			description,
 			userId: currentUser?.id || "null",
