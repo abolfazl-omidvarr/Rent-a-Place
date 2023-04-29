@@ -12,7 +12,7 @@ import { safeUser } from "@/app/types";
 
 interface ListingCardProps {
 	data: Listing;
-	currentUser: safeUser;
+	currentUser?: safeUser;
 	reservation?: Reservation;
 	onAction?: (id: string) => void;
 	disabled?: boolean;
