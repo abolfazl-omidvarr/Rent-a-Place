@@ -2,6 +2,7 @@ import React from "react";
 import { Container, ClientOnly, EmptyState, ListingCard } from "./components";
 
 import { getCurrentUser, getListing } from "./actions";
+import { safeListing } from "./types";
 
 const Home = async () => {
 	const currentUser = await getCurrentUser();
@@ -18,7 +19,7 @@ const Home = async () => {
 		<ClientOnly>
 			<Container>
 				<div className="pt-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8">
-					{listing.map((listing: any) => {
+					{listing.map((listing) => {
 						return (
 							<ListingCard
 								key={listing.id}

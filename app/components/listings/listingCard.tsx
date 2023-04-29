@@ -8,10 +8,10 @@ import { Listing, Reservation } from "@prisma/client";
 import { Button, HeartButton } from "../";
 
 import useCountries from "@/app/hooks/useCountries";
-import { safeUser } from "@/app/types";
+import { safeListing, safeUser } from "@/app/types";
 
 interface ListingCardProps {
-	data: Listing;
+	data: safeListing;
 	currentUser?: safeUser;
 	reservation?: Reservation;
 	onAction?: (id: string) => void;
@@ -60,7 +60,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
 
 	return (
 		<div
-			onClick={() => router.push(`/listing/${data.id}`)}
+			onClick={() => router.push(`/listings/${data.id}`)}
 			className="col-span-1 cursor-pointer group"
 		>
 			<div className="flex flex-col gap-2 w-full">
