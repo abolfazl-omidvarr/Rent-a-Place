@@ -4,4 +4,12 @@ import useRentModal from "./useRentModal";
 
 import useFavorite from "./useFavorite";
 
-export { useLoginModal, useRegisterModal, useRentModal, useFavorite };
+import useCountries from "./useCountries";
+
+export {
+	useLoginModal,
+	useRegisterModal,
+	useRentModal,
+	useFavorite,
+	useCountries,
+};

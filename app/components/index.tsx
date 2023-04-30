@@ -27,6 +27,7 @@ import EmptyState from "./emptyState";
 import HeartButton from "./heartButton";
 
 import ListingCard from "./listings/listingCard";
+import ListingHead from "./listings/listingHead";
 
 export {
 	Navbar,
@@ -48,6 +49,7 @@ export {
 	ImageUpload,
 	///
 	ListingCard,
+	ListingHead,
 	///
 	Container,
 	Heading,

@@ -1,3 +1,3 @@
-import listingClient from "./listingClient";
+import ListingClient from "./listingClient";
 
-export {listingClient}
+export {ListingClient}

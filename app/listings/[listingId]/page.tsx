@@ -4,7 +4,7 @@ import { getCurrentUser } from "@/app/actions";
 import getListingById from "@/app/actions/getListingById";
 import { ClientOnly, EmptyState } from "@/app/components";
 
-import { listingClient } from "./components";
+import { ListingClient } from "./components";
 
 interface IParams {
 	listingId?: string;
