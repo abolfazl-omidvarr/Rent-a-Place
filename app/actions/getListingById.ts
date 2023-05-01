@@ -21,7 +21,7 @@ const getListingById = async (params: IParams) => {
 			return null;
 		}
 
-		return {
+		const safeListing = {
 			...listing,
 			createdAt: listing.createdAt.toISOString(),
 			user: {
@@ -31,6 +31,8 @@ const getListingById = async (params: IParams) => {
 				emailVerified: listing.user.emailVerified?.toISOString(),
 			},
 		};
+
+		return safeListing;
 	} catch (err) {
 		throw new Error("something went wrong: " + err);
 	}
