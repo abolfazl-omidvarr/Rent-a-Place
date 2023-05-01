@@ -34,6 +34,10 @@ import ListingInfo from "./listings/listingInfo";
 import ListingCategory from "./listings/listingCategory";
 import ListingReservation from "./listings/listingReservation";
 
+import TripsClient from "./trips/tripsClient";
+
+import ReservationClient from "./reservations/reservationClient";
+
 export {
 	Navbar,
 	Logo,
@@ -60,6 +64,10 @@ export {
 	ListingInfo,
 	ListingCategory,
 	ListingReservation,
+	///
+	TripsClient,
+	///
+	ReservationClient,
 	///
 	Container,
 	Heading,

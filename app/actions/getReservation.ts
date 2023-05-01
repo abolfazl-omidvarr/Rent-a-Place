@@ -19,7 +19,7 @@ const getReservation = async (params: IParams) => {
 			query.userId = userId;
 		}
 		if (authorId) {
-			query.authorId = authorId;
+			query.listing = { userId: authorId };
 		}
 
 		const reservation = await prisma.reservation.findMany({
@@ -44,7 +44,6 @@ const getReservation = async (params: IParams) => {
 		}));
 
 		return safeReservation;
-    
 	} catch (error: any) {
 		throw new Error(error);
 	}
