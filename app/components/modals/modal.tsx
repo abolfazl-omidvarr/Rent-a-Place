@@ -59,6 +59,7 @@ const Modal: React.FC<ModalProps> = ({
 		<>
 			<div
 				className="
+					select-none
           justify-center
         	items-center
           flex

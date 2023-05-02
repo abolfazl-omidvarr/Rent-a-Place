@@ -62,12 +62,3 @@ export const DELETE = async (
 
 	return NextResponse.json(user);
 };
-
-// const user = await prisma.user.update({
-// 	where: {
-// 		id: currentUser.id,
-// 	},
-// 	data: {
-// 		favoriteIds,
-// 	},
-// });

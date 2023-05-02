@@ -112,11 +112,6 @@ const RentModal = () => {
 			.finally(() => setIsLoading(false));
 	};
 
-	// const toggle = useCallback(() => {
-	// 	registerModal.onClose();
-	// 	loginModal.onOpen();
-	// }, [loginModal, registerModal]);
-
 	let bodyContent;
 	if (step === STEPS.CATEGORY) {
 		bodyContent = (

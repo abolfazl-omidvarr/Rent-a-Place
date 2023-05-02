@@ -35,6 +35,7 @@
 		"react-icons": "^4.8.0",
 		"react-leaflet": "^4.2.1",
 		"react-select": "^5.7.2",
+		"react-spinners": "^0.13.8",
 		"tailwindcss": "3.3.1",
 		"world-countries": "^4.0.0",
 		"zustand": "^4.3.7"
@@ -43,6 +44,7 @@
 		"@types/bcrypt": "^5.0.0",
 		"@types/leaflet": "^1.9.3",
 		"@types/react-date-range": "^1.4.4",
+		"@types/react-spinner": "^0.2.0",
 		"prisma": "^4.13.0",
 		"typescript": "^5.0.4"
 	}

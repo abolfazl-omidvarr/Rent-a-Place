@@ -1,3 +1,5 @@
+import Loader from "./loader";
+
 import Navbar from "./navbar/navbar";
 import Search from "./navbar/search";
 import UserMenu from "./navbar/userMenu";
@@ -9,6 +11,7 @@ import Modal from "./modals/modal";
 import RegisterModal from "./modals/registerModal";
 import LoginModal from "./modals/loginModal";
 import RentModal from "./modals/rentModal";
+import SearchModal from "./modals/searchModal";
 
 import Input from "./inputs/input";
 import CategoryInput from "./inputs/categoryInput";
@@ -38,7 +41,11 @@ import TripsClient from "./trips/tripsClient";
 
 import ReservationClient from "./reservations/reservationClient";
 
+import PropertiesClient from "./properties/propertiesClient";
+
 export {
+	Loader,
+	///
 	Navbar,
 	Logo,
 	Search,
@@ -50,6 +57,7 @@ export {
 	RegisterModal,
 	LoginModal,
 	RentModal,
+	SearchModal,
 	///
 	Input,
 	CategoryInput,
@@ -68,6 +76,8 @@ export {
 	TripsClient,
 	///
 	ReservationClient,
+	///
+	PropertiesClient,
 	///
 	Container,
 	Heading,

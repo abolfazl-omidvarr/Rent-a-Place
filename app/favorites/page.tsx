@@ -1,5 +1,6 @@
 import { ClientOnly, EmptyState, ReservationClient } from "../components";
 import { getFavoriteListings, getCurrentUser } from "../actions";
+import FavoritesClient from "../components/favorites/favoritesClient";
 
 const FavoritesPage = async () => {
 	const listings = await getFavoriteListings();
@@ -26,11 +27,7 @@ const FavoritesPage = async () => {
 
 	return (
 		<ClientOnly>
-			/////////
-			{/* <ReservationClient
-				reservations={reservations}
-				currentUser={currentUser}
-			/> */}
+			<FavoritesClient listings={listings} currentUser={currentUser} />
 		</ClientOnly>
 	);
 };

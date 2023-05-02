@@ -7,12 +7,12 @@ import { safeListing, safeUser } from "@/app/types";
 import { Container, Heading, ListingCard } from "..";
 import { toast } from "react-hot-toast";
 
-interface FavoritesClientProps {
+interface PropertiesClientProps {
 	listings: safeListing[];
-	currentUser?: safeUser | undefined;
+	currentUser: safeUser;
 }
 
-const FavoritesClient: React.FC<FavoritesClientProps> = ({
+const PropertiesClient: React.FC<PropertiesClientProps> = ({
 	listings,
 	currentUser,
 }) => {
@@ -24,9 +24,9 @@ const FavoritesClient: React.FC<FavoritesClientProps> = ({
 			setDeletingId(id);
 
 			axios
-				.delete(`/api/reservations/${id}`)
+				.delete(`/api/listing/${id}`)
 				.then(() => {
-					toast.success("Reservations canceled");
+					toast.success("Listing deleted");
 					router.refresh();
 				})
 				.catch((err) => {
@@ -41,12 +41,16 @@ const FavoritesClient: React.FC<FavoritesClientProps> = ({
 	return (
 		<Container>
 			<div>
-				<Heading title="Favorites" subtitle="List of places you have favored" />
+				<Heading title="Properties" subtitle="List of your properties" />
 				<div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8">
 					{listings.map((listing) => (
 						<ListingCard
 							key={listing.id}
 							data={listing}
+							actionId={listing.id}
+							onAction={onCancel}
+							disabled={deletingId === listing.id}
+							actionLabel="Delete property"
 							currentUser={currentUser}
 						/>
 					))}
@@ -56,4 +60,4 @@ const FavoritesClient: React.FC<FavoritesClientProps> = ({
 	);
 };
 
-export default FavoritesClient;
+export default PropertiesClient;
