@@ -1,5 +1,3 @@
-import Loader from "./loader";
-
 import Navbar from "./navbar/navbar";
 import Search from "./navbar/search";
 import UserMenu from "./navbar/userMenu";
@@ -37,8 +35,6 @@ import ListingCategory from "./listings/listingCategory";
 import ListingReservation from "./listings/listingReservation";
 
 export {
-	Loader,
-	///
 	Navbar,
 	Logo,
 	Search,
