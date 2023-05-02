@@ -2,7 +2,6 @@ import React from "react";
 import { Container, ClientOnly, EmptyState, ListingCard } from "./components";
 
 import { getCurrentUser, getListing } from "./actions";
-import { safeListing } from "./types";
 import { IListingsParams } from "./actions/getListing";
 
 interface HomeProps {

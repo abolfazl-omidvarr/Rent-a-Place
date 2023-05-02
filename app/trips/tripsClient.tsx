@@ -1,18 +1,18 @@
 "use client";
-import React, { useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 
 import { safeReservation, safeUser } from "@/app/types";
-import { Container, Heading, ListingCard } from "..";
+import { Container, Heading, ListingCard } from "../components";
 import { toast } from "react-hot-toast";
 
-interface ReservationClientProps {
+interface TripsClientProps {
 	reservations: safeReservation[];
 	currentUser: safeUser;
 }
 
-const ReservationClient: React.FC<ReservationClientProps> = ({
+const TripsClient: React.FC<TripsClientProps> = ({
 	reservations,
 	currentUser,
 }) => {
@@ -41,7 +41,10 @@ const ReservationClient: React.FC<ReservationClientProps> = ({
 	return (
 		<Container>
 			<div>
-				<Heading title="Reservation" subtitle="Bookings on your properties" />
+				<Heading
+					title="Trips"
+					subtitle="Where you've been and where you're going"
+				/>
 				<div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8">
 					{reservations.map((reserve) => (
 						<ListingCard
@@ -51,7 +54,7 @@ const ReservationClient: React.FC<ReservationClientProps> = ({
 							actionId={reserve.id}
 							onAction={onCancel}
 							disabled={deletingId === reserve.id}
-							actionLabel="Cancel guest reservation"
+							actionLabel="Cancel Reservation"
 							currentUser={currentUser}
 						/>
 					))}
@@ -61,4 +64,4 @@ const ReservationClient: React.FC<ReservationClientProps> = ({
 	);
 };
 
-export default ReservationClient;
+export default TripsClient;

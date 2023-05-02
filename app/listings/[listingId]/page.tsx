@@ -2,7 +2,9 @@ import React from "react";
 
 import { getCurrentUser } from "@/app/actions";
 import { getListingById, getReservation } from "@/app/actions";
-import { ClientOnly, EmptyState, ListingClient } from "@/app/components";
+import { ClientOnly, EmptyState } from "@/app/components";
+
+import ListingClient from "./listingClient";
 
 interface IParams {
 	listingId?: string;
@@ -24,7 +26,6 @@ const ListingPage = async ({ params }: { params: IParams }) => {
 	return (
 		<ClientOnly>
 			<ListingClient
-				//@ts-ignore
 				listing={listing}
 				reservations={reservations}
 				currentUser={currentUser}

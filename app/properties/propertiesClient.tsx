@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 
 import { safeListing, safeUser } from "@/app/types";
-import { Container, Heading, ListingCard } from "..";
+import { Container, Heading, ListingCard } from "../components";
 import { toast } from "react-hot-toast";
 
 interface PropertiesClientProps {

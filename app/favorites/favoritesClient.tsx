@@ -3,17 +3,17 @@ import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 
-import { safeReservation, safeUser } from "@/app/types";
-import { Container, Heading, ListingCard } from "../";
+import { safeListing, safeUser } from "@/app/types";
+import { Container, Heading, ListingCard } from "../components";
 import { toast } from "react-hot-toast";
 
-interface TripsClientProps {
-	reservations: safeReservation[];
-	currentUser: safeUser;
+interface FavoritesClientProps {
+	listings: safeListing[];
+	currentUser?: safeUser | undefined;
 }
 
-const TripsClient: React.FC<TripsClientProps> = ({
-	reservations,
+const FavoritesClient: React.FC<FavoritesClientProps> = ({
+	listings,
 	currentUser,
 }) => {
 	const router = useRouter();
@@ -41,20 +41,12 @@ const TripsClient: React.FC<TripsClientProps> = ({
 	return (
 		<Container>
 			<div>
-				<Heading
-					title="Trips"
-					subtitle="Where you've been and where you're going"
-				/>
+				<Heading title="Favorites" subtitle="List of places you have favored" />
 				<div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8">
-					{reservations.map((reserve) => (
+					{listings.map((listing) => (
 						<ListingCard
-							key={reserve.id}
-							data={reserve.listing}
-							reservation={reserve}
-							actionId={reserve.id}
-							onAction={onCancel}
-							disabled={deletingId === reserve.id}
-							actionLabel="Cancel Reservation"
+							key={listing.id}
+							data={listing}
 							currentUser={currentUser}
 						/>
 					))}
@@ -64,4 +56,4 @@ const TripsClient: React.FC<TripsClientProps> = ({
 	);
 };
 
-export default TripsClient;
+export default FavoritesClient;

@@ -30,18 +30,11 @@ import ClientOnly from "./clientOnly";
 import EmptyState from "./emptyState";
 import HeartButton from "./heartButton";
 
-import ListingClient from "./listings/listingClient";
 import ListingCard from "./listings/listingCard";
 import ListingHead from "./listings/listingHead";
 import ListingInfo from "./listings/listingInfo";
 import ListingCategory from "./listings/listingCategory";
 import ListingReservation from "./listings/listingReservation";
-
-import TripsClient from "./trips/tripsClient";
-
-import ReservationClient from "./reservations/reservationClient";
-
-import PropertiesClient from "./properties/propertiesClient";
 
 export {
 	Loader,
@@ -66,18 +59,11 @@ export {
 	ImageUpload,
 	Calendar,
 	///
-	ListingClient,
 	ListingCard,
 	ListingHead,
 	ListingInfo,
 	ListingCategory,
 	ListingReservation,
-	///
-	TripsClient,
-	///
-	ReservationClient,
-	///
-	PropertiesClient,
 	///
 	Container,
 	Heading,

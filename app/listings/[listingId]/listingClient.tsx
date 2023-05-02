@@ -29,6 +29,7 @@ interface ListingClientProps {
 	};
 	currentUser?: safeUser | null;
 }
+
 const ListingClient: React.FC<ListingClientProps> = ({
 	reservations = [],
 	listing,

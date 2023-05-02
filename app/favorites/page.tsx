@@ -1,6 +1,6 @@
-import { ClientOnly, EmptyState, ReservationClient } from "../components";
+import { ClientOnly, EmptyState } from "../components";
 import { getFavoriteListings, getCurrentUser } from "../actions";
-import FavoritesClient from "../components/favorites/favoritesClient";
+import FavoritesClient from "./favoritesClient";
 
 const FavoritesPage = async () => {
 	const listings = await getFavoriteListings();

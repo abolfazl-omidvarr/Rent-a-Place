@@ -1,5 +1,7 @@
-import { ClientOnly, EmptyState, PropertiesClient } from "../components";
+import { ClientOnly, EmptyState } from "../components";
 import { getCurrentUser, getListing } from "../actions";
+
+import PropertiesClient from "./propertiesClient";
 
 const PropertiesPage = async () => {
 	const currentUser = await getCurrentUser();
